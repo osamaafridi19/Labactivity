@@ -7,26 +7,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="style1.css">
-</head>
+    <script>
+        function validate(){
+            var name=document.stud_form.name;
+            var email=document.stud_form.email;
+            var mobile=document.stud_form.mobile;
+            var gender=document.stud_form.gender;
+            if(name.value.length<=0){
+                alert("Name is required")
+                name.focus()
+                return false;
+            }
+            if(mobile.value.length<=0){
+                alert("Mobile No is required")
+                mobile.focus()
+                return false;
+            }
+            if(email.value.length<=0){
+                alert("Email is required")
+                email.focus()
+                return false;
+            }
+            if(gender.value.length<=0){
+                alert("gender is required")
+                gender.focus()
+                return false;
+            }
+            if(course.value=="Select"){
+                alert("Course is required")
+                course.focus()
+                return false;
+            }
+            var check=false;
+            for(var i=program.length-1;i>=0;i--){
+                if(program[i].checked){
+                    check=true;
+                }
+            }
+                if(check==false){
+                    alert("Program is required")
+                    return false;
+                }
+            
+            
+        
+            return false;
+              
+        }
+        function validateString(id){
+            var element=document.getElementById(id);
+            var regExp=/^[a-zA-Z0-9 ]{1,15}$/;
+            if(!regExp.test(element.value)){
+                alert("Enter valid String");
+                return false;
+            }
+        }
+        function validateEmail(id){
+            var element=document.getElementById(id);
+            var regExp=/^[a-zA-Z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z]{2,4}$/;
+            if(!regExp.test(element.value)){
+                alert("Enter valid Email");
+                return false;
+            }
+        
+        }
+        function validateNumb(id){
+        var element=document.getElementById(id);
+        var regExp=/^[0-9]{11}$/;
+        if(!regExp.test(element.value)){
+            alert("enter valide number")
+            return false;
+        }
+    }
+    </script>
+        </head>
 <body > 
-        <section class="main">
           
 <div class="container" >
    <div class="sign-up">
     <h1 class="heading">Registaration</h1>
+    <form method="" action="" name="stud_form" onsubmit="return validate()">
     <div class="text">
     <img height="20px" src="user.png" />
-    <input placeholder=" Name" type="text" />
+    <input type="text" id="name"   name="name" onblur="validateString(this.id)">
     </div>
     <div class="text">
     <img height="12px" src="email.png" />
-    <input placeholder=" Example@gmail.com" type="email" />
+    <input type="text" id="email" name="email" onblur="validateEmail(this.id)">
     </div>
     <div class="text">
-    <img height="20px" src="password.png" />
-    <input placeholder=" Password" type="password" />
+        <img height="20px" src="password.png" />
+        <input type="number" id="numb"  name="mobile" onblur="validateNumb(this.id)">
     </div>
-   <button>CREATE ACCOUNT</button>
+    <div class="gender" align="center">
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+    </div>
+   
+
+   <button>CREATE ACCOUNT</button></form>
     </div>
     </div>
 
