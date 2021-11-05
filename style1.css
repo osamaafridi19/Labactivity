@@ -1,6 +1,5 @@
-
-   a{
-    text-decoration:none;
+   body{
+      background-color: skyblue;
    }
    .container{
     width:72%;
@@ -14,7 +13,7 @@
     display:flex;
     justify-content: center;
     align-items:center;
-    background-image: url("bg1.jpg");
+    background-image: url("back.jpeg");
     background-repeat:no-repeat;
     background-size:cover;
    }
@@ -24,16 +23,7 @@
     display:flex;
     flex-direction:column;
     align-items: center;
-    
-   }
-   .text-container{
-    width:50%;
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    
-   }
+    }
    .heading{
     font-family:calibri;
     color: black;
@@ -54,21 +44,10 @@
     border:none;
     font-size:14px;
     margin:5px;
+    background:#FFFFFF ;
    }
    .text img{
     margin-left:20px; 
-   }
-   .conditions{
-    font-family:'Times New Roman';
-    color:gray;
-    font-size:14px;
-   }
-   .trems{
-    display: flex;
-    align-items:center; 
-   }
-   .conditions a{
-    color:#7d22e3;
    }
    button{
     width:200px;
@@ -81,34 +60,4 @@
     color:#FFFFFF;
     letter-spacing:1px;
    }
-   .text-container p{
-    width:70%;
-    text-align: center;
-    font-family:arial;
-    font-size: 15px;
-   }
-   .social  li a{
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 5px;
-      box-shadow: 1px 2px 12px rgba(0,0,0,0.2);
-      border-radius:5px;
-   }
-   .social {
-      display: flex;
-      justify-content: center;
-      padding: 0px;
-   }
-   .social li a i{
-   color:#FFFFFF;
-   }
-   .social li a:hover{
-      background-color: #cc1f46;
-      
-   }
-   ul{
-      list-style: none;
-   }
+   
